@@ -1,0 +1,32 @@
+// DEVELOPMENT / MVP RULES
+// These rules intentionally use authenticated-user access for the first MVP.
+// They must be hardened before a production-scale/public V2 release.
+//
+// Known, accepted MVP limitations:
+//   1. The host can potentially see private role/game data.
+//   2. Client-side game resolution is trusted.
+//   3. A malicious client may manipulate game state.
+//   4. Rules are intentionally permissive for any authenticated user.
+//   5. Host authority is not cryptographically/server enforced.
+//
+// Firebase Authentication is still REQUIRED for every read/write.
+// The Firestore data model (players, privatePlayerData, rounds, privateActions,
+// privateVotes, privateResults, messages, spectatorMessages) is unchanged so a
+// future V2 can restore isolation without redesigning the game.
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /rooms/{roomId} {
+      allow read, write: if request.auth != null;
+
+      // Covers players, privatePlayerData, rounds, rounds/*/privateActions,
+      // rounds/*/privateVotes, rounds/*/privateResults, messages,
+      // spectatorMessages and any other subcollection under a room.
+      match /{document=**} {
+        allow read, write: if request.auth != null;
+      }
+    }
+  }
+}
