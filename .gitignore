@@ -1,0 +1,111 @@
+# -----------------------------------------------------------------------------
+# Miscellaneous & Operating System Files
+# -----------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+*.bak
+
+# -----------------------------------------------------------------------------
+# IDEs & Editors
+# -----------------------------------------------------------------------------
+# Android Studio & IntelliJ IDEA
+*.iml
+.idea/
+*.ipr
+*.iws
+
+# Visual Studio Code
+.vscode/
+
+# -----------------------------------------------------------------------------
+# Flutter & Dart Build Artifacts
+# -----------------------------------------------------------------------------
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+
+# Exceptions to keep essential assets
+!build/unit_test_assets/
+!build/native_assets/
+
+# -----------------------------------------------------------------------------
+# Android Platform Specifics
+# -----------------------------------------------------------------------------
+**/android/.gradle/
+**/android/captures/
+**/android/gradle/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
+
+# Android Signing / Keystores
+android/key.properties
+*.jks
+*.keystore
+
+# -----------------------------------------------------------------------------
+# iOS & macOS Platform Specifics
+# -----------------------------------------------------------------------------
+**/ios/**/GeneratedPluginRegistrant.h
+**/ios/**/GeneratedPluginRegistrant.m
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/app.flx
+**/ios/Flutter/app.zip
+**/ios/Flutter/flutter_assets/
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Flutter/ephemeral/
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/profile
+**/ios/debug
+**/ios/**/xcuserdata
+**/ios/**/DerivedData
+
+# macOS Ephemeral
+**/macos/Flutter/ephemeral/
+**/macos/Pods/
+
+# -----------------------------------------------------------------------------
+# Desktop (Windows & Linux) Ephemeral Files
+# -----------------------------------------------------------------------------
+**/windows/flutter/ephemeral/
+**/linux/flutter/ephemeral/
+
+# -----------------------------------------------------------------------------
+# Firebase & Cloud Functions
+# -----------------------------------------------------------------------------
+**/functions/node_modules/
+**/functions/lib/
+**/functions/.runtimeconfig.json
+**/functions/npm-debug.log*
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# -----------------------------------------------------------------------------
+# Secrets, Private Keys & Environment Configurations
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+**/google-services.json
+**/GoogleService-Info.plist

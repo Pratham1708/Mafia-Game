@@ -44,11 +44,12 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAGjZpZxH5VFiuLuQUhOLayw-x-KWaQpNk',
-    appId: '1:852979401927:web:de78847778c4cc0271eae2',
-    messagingSenderId: '852979401927',
-    projectId: 'mafia-multiplayer-13f5c',
-    authDomain: 'mafia-multiplayer-13f5c.firebaseapp.com',
-    storageBucket: 'mafia-multiplayer-13f5c.firebasestorage.app',
+    apiKey: 'AIzaSyPlaceholderWebApiKeyForMafia',
+    appId: '1:123456789012:web:abcdef1234567890',
+    messagingSenderId: '123456789012',
+    projectId: 'mafia-game-mvp',
+    authDomain: 'mafia-game-mvp.firebaseapp.com',
+    storageBucket: 'mafia-game-mvp.appspot.com',
   );
+
 }
